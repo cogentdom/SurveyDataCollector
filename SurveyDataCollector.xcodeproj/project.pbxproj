@@ -14,6 +14,7 @@
 		F253D7C3263FE59D00F3FBFF /* SurveyDataCollector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F253D7C1263FE59D00F3FBFF /* SurveyDataCollector.xcdatamodeld */; };
 		F253D7C5263FE59E00F3FBFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F253D7C4263FE59E00F3FBFF /* Assets.xcassets */; };
 		F253D7C8263FE59E00F3FBFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F253D7C6263FE59E00F3FBFF /* LaunchScreen.storyboard */; };
+		F253D7D1263FF9CC00F3FBFF /* FeedbackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F253D7D0263FF9CC00F3FBFF /* FeedbackVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F253D7C4263FE59E00F3FBFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F253D7C7263FE59E00F3FBFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F253D7C9263FE59E00F3FBFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F253D7D0263FF9CC00F3FBFF /* FeedbackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				F253D7C6263FE59E00F3FBFF /* LaunchScreen.storyboard */,
 				F253D7C9263FE59E00F3FBFF /* Info.plist */,
 				F253D7C1263FE59D00F3FBFF /* SurveyDataCollector.xcdatamodeld */,
+				F253D7D0263FF9CC00F3FBFF /* FeedbackVC.swift */,
 			);
 			path = SurveyDataCollector;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F253D7BD263FE59D00F3FBFF /* ViewController.swift in Sources */,
+				F253D7D1263FF9CC00F3FBFF /* FeedbackVC.swift in Sources */,
 				F253D7B9263FE59D00F3FBFF /* AppDelegate.swift in Sources */,
 				F253D7C3263FE59D00F3FBFF /* SurveyDataCollector.xcdatamodeld in Sources */,
 				F253D7BB263FE59D00F3FBFF /* SceneDelegate.swift in Sources */,
