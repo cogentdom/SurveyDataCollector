@@ -1651,29 +1651,103 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darBlueGradient" translatesAutoresizingMaskIntoConstraints="NO" id="Ica-ll-GYB">
-                                <rect key="frame" x="0.0" y="56" width="414" height="703"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darBlueGradient_landscape" translatesAutoresizingMaskIntoConstraints="NO" id="bMs-j3-N1g">
                                 <rect key="frame" x="44" y="44" width="808" height="300"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darBlueGradient" translatesAutoresizingMaskIntoConstraints="NO" id="Ica-ll-GYB">
+                                <rect key="frame" x="0.0" y="56" width="414" height="703"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ud6-Eq-ijQ">
+                                <rect key="frame" x="0.0" y="66" width="414" height="683"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jbu-Eu-dGc" userLabel="UpperView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                        <color key="backgroundColor" red="0.15435882440000001" green="0.51550544659999997" blue="0.1818211639" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="nVs-ak-oD7"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KRg-Tj-N0D" userLabel="LowerView">
+                                        <rect key="frame" x="0.0" y="80" width="414" height="603"/>
+                                        <subviews>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kOM-k1-PFz">
+                                                <rect key="frame" x="0.0" y="10" width="414" height="593"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A2d-4r-agn" userLabel="ContentView">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                                        <color key="backgroundColor" red="0.0" green="1" blue="0.52390272010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="D1c-LI-ah6"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JDr-6p-1Ne" userLabel="MidView">
+                                                        <rect key="frame" x="0.0" y="110" width="414" height="100"/>
+                                                        <color key="backgroundColor" red="0.0" green="1" blue="0.52390272010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="9mj-Tu-oOP"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ge4-co-wbn" userLabel="LastView">
+                                                        <rect key="frame" x="0.0" y="220" width="414" height="700"/>
+                                                        <color key="backgroundColor" red="0.0" green="1" blue="0.52390272010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="700" id="QDm-sS-PLI"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Ge4-co-wbn" secondAttribute="trailing" id="1YZ-Db-Ehu"/>
+                                                    <constraint firstItem="Ge4-co-wbn" firstAttribute="leading" secondItem="kOM-k1-PFz" secondAttribute="leading" id="EmY-it-iJj"/>
+                                                    <constraint firstItem="JDr-6p-1Ne" firstAttribute="centerX" secondItem="kOM-k1-PFz" secondAttribute="centerX" id="FfB-S8-6ZC"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Ge4-co-wbn" secondAttribute="bottom" id="GTE-xE-Hmz"/>
+                                                    <constraint firstItem="A2d-4r-agn" firstAttribute="centerX" secondItem="kOM-k1-PFz" secondAttribute="centerX" id="QMh-Jn-7RL"/>
+                                                    <constraint firstItem="JDr-6p-1Ne" firstAttribute="leading" secondItem="kOM-k1-PFz" secondAttribute="leading" id="eSB-jV-IdM"/>
+                                                    <constraint firstItem="Ge4-co-wbn" firstAttribute="top" secondItem="JDr-6p-1Ne" secondAttribute="bottom" constant="10" id="ijA-ts-kg9"/>
+                                                    <constraint firstItem="JDr-6p-1Ne" firstAttribute="top" secondItem="A2d-4r-agn" secondAttribute="bottom" constant="10" id="nka-fM-Srz"/>
+                                                    <constraint firstItem="A2d-4r-agn" firstAttribute="top" secondItem="kOM-k1-PFz" secondAttribute="top" id="tUV-uA-Xcv"/>
+                                                    <constraint firstAttribute="trailing" secondItem="JDr-6p-1Ne" secondAttribute="trailing" id="uJj-ar-Otp"/>
+                                                </constraints>
+                                            </scrollView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="kOM-k1-PFz" secondAttribute="bottom" id="Apm-Q0-Acl"/>
+                                            <constraint firstItem="kOM-k1-PFz" firstAttribute="leading" secondItem="KRg-Tj-N0D" secondAttribute="leading" id="E6c-SP-0Zv"/>
+                                            <constraint firstAttribute="trailing" secondItem="kOM-k1-PFz" secondAttribute="trailing" id="k5S-aI-oBT"/>
+                                            <constraint firstItem="kOM-k1-PFz" firstAttribute="top" secondItem="KRg-Tj-N0D" secondAttribute="top" constant="10" id="s2G-Sb-nMF"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="KRg-Tj-N0D" firstAttribute="centerX" secondItem="ud6-Eq-ijQ" secondAttribute="centerX" id="4Bm-zt-5gh"/>
+                                    <constraint firstItem="Jbu-Eu-dGc" firstAttribute="centerX" secondItem="ud6-Eq-ijQ" secondAttribute="centerX" id="ANX-7I-iii"/>
+                                    <constraint firstItem="Jbu-Eu-dGc" firstAttribute="trailing" secondItem="ud6-Eq-ijQ" secondAttribute="trailingMargin" id="Aq4-mE-kqq"/>
+                                    <constraint firstItem="Jbu-Eu-dGc" firstAttribute="leading" secondItem="ud6-Eq-ijQ" secondAttribute="leadingMargin" id="ReZ-Qc-5qo"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0VN-h2-byy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="bMs-j3-N1g" firstAttribute="leading" secondItem="0VN-h2-byy" secondAttribute="leading" id="6Iy-59-SOq"/>
+                            <constraint firstItem="0VN-h2-byy" firstAttribute="bottom" secondItem="ud6-Eq-ijQ" secondAttribute="bottom" constant="10" id="770-xD-ecd"/>
                             <constraint firstItem="0VN-h2-byy" firstAttribute="bottom" secondItem="bMs-j3-N1g" secondAttribute="bottom" id="7EL-KF-28B"/>
+                            <constraint firstItem="Ge4-co-wbn" firstAttribute="width" secondItem="GnX-LR-XUs" secondAttribute="width" id="AZN-We-QiQ"/>
+                            <constraint firstItem="A2d-4r-agn" firstAttribute="width" secondItem="GnX-LR-XUs" secondAttribute="width" id="Byn-3r-8Nm"/>
                             <constraint firstItem="Ica-ll-GYB" firstAttribute="leading" secondItem="0VN-h2-byy" secondAttribute="leading" id="QJ7-9m-sDP"/>
                             <constraint firstItem="Ica-ll-GYB" firstAttribute="top" secondItem="0VN-h2-byy" secondAttribute="top" id="RiS-n1-DhA"/>
+                            <constraint firstItem="ud6-Eq-ijQ" firstAttribute="top" secondItem="0VN-h2-byy" secondAttribute="top" constant="10" id="Xbh-8y-iKA"/>
+                            <constraint firstItem="0VN-h2-byy" firstAttribute="trailing" secondItem="ud6-Eq-ijQ" secondAttribute="trailing" id="aBk-GM-Noo"/>
                             <constraint firstItem="0VN-h2-byy" firstAttribute="trailing" secondItem="Ica-ll-GYB" secondAttribute="trailing" id="bgY-gB-rXn"/>
+                            <constraint firstItem="ud6-Eq-ijQ" firstAttribute="leading" secondItem="0VN-h2-byy" secondAttribute="leading" id="dGD-Q8-DIz"/>
                             <constraint firstItem="0VN-h2-byy" firstAttribute="trailing" secondItem="bMs-j3-N1g" secondAttribute="trailing" id="eOs-AA-SmU"/>
                             <constraint firstItem="bMs-j3-N1g" firstAttribute="top" secondItem="0VN-h2-byy" secondAttribute="top" id="l1Z-wW-D7n"/>
                             <constraint firstItem="0VN-h2-byy" firstAttribute="bottom" secondItem="Ica-ll-GYB" secondAttribute="bottom" id="nnj-EQ-03N"/>
+                            <constraint firstItem="JDr-6p-1Ne" firstAttribute="width" secondItem="GnX-LR-XUs" secondAttribute="width" id="zCh-Pa-7J2"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Ica-ll-GYB"/>
                                 <exclude reference="bMs-j3-N1g"/>
+                                <exclude reference="Ica-ll-GYB"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=regular">
@@ -1730,12 +1804,12 @@
             </objects>
             <point key="canvasLocation" x="3894" y="-1075"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Ratings-->
         <scene sceneID="eTN-92-egB">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="E9y-P2-TER" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="oc9-of-HBF"/>
+                    <navigationItem key="navigationItem" title="Ratings" id="oc9-of-HBF"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xUO-Ub-pTA">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
