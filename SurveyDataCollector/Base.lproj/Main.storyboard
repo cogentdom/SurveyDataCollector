@@ -735,15 +735,19 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="password" destination="0xM-hn-5MZ" id="cdA-BL-822"/>
+                        <outlet property="username" destination="KBw-aI-mdv" id="urj-9E-v5D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-252" y="167"/>
         </scene>
-        <!--SignupVC-->
+        <!--View Controller-->
         <scene sceneID="uAS-dZ-chS">
             <objects>
-                <viewController id="uEI-nM-95M" customClass="SignupVC" customModule="SurveyDataCollector" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uEI-nM-95M" customClass="ViewController" customModule="SurveyDataCollector" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TQH-ct-npP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1046,6 +1050,9 @@
                                         <include reference="d9h-Oh-xFZ"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="signUp:" destination="uEI-nM-95M" eventType="touchUpInside" id="lDf-Hn-qgs"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4jN-rh-ice"/>
@@ -1260,6 +1267,12 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="add_email" destination="hNa-cp-1SJ" id="HF2-Ir-1QN"/>
+                        <outlet property="add_pass" destination="38Y-TC-4pk" id="T0e-0U-e6m"/>
+                        <outlet property="add_pass_copy" destination="ZMl-tr-21i" id="Xuv-T2-X9f"/>
+                        <outlet property="add_user" destination="M6B-tR-hZH" id="quT-gJ-3PD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jg6-pd-rwy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
