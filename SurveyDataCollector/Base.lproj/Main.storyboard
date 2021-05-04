@@ -547,7 +547,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="NHU-vd-BJy" kind="show" id="tgC-O2-Bj6"/>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mO3-TZ-7eI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1283,7 +1283,7 @@
             <objects>
                 <viewController id="DBR-jJ-37b" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sFJ-PU-h8T">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="dpz-XV-Jzr"/>
                         <color key="backgroundColor" red="0.043717260360000003" green="0.24189585050000001" blue="0.51550544659999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1310,17 +1310,17 @@
             <objects>
                 <viewController id="vNn-30-aAf" customClass="AccountVC" customModule="SurveyDataCollector" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BPC-Pm-6W8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradientBlue_landscape" translatesAutoresizingMaskIntoConstraints="NO" id="wC6-si-OqD">
                                 <rect key="frame" x="44" y="44" width="808" height="349"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradientBlue" translatesAutoresizingMaskIntoConstraints="NO" id="ep5-Zu-k7Z">
-                                <rect key="frame" x="0.0" y="56" width="414" height="752"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSA-5i-quY">
-                                <rect key="frame" x="87" y="136" width="240" height="40"/>
+                                <rect key="frame" x="87" y="168" width="240" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="7XS-uc-CYE"/>
                                     <constraint firstAttribute="width" constant="280" id="gUl-rn-tRX"/>
@@ -1352,7 +1352,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOm-Pv-rEj">
-                                <rect key="frame" x="67" y="256" width="280" height="30"/>
+                                <rect key="frame" x="67" y="288" width="280" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="GWD-Uv-QVj"/>
                                     <constraint firstAttribute="height" constant="30" id="qE2-Ii-sZe"/>
@@ -1386,7 +1386,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXu-uT-7V5">
-                                <rect key="frame" x="67" y="286" width="280" height="30"/>
+                                <rect key="frame" x="67" y="318" width="280" height="30"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="0h8-Mq-vMR"/>
@@ -1419,7 +1419,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0P-iM-3vD">
-                                <rect key="frame" x="67" y="356" width="280" height="30"/>
+                                <rect key="frame" x="67" y="388" width="280" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="6eo-RX-1yS"/>
                                     <constraint firstAttribute="width" constant="280" id="Sjt-pw-4oj"/>
@@ -1451,7 +1451,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2b7-Su-02X">
-                                <rect key="frame" x="67" y="386" width="280" height="30"/>
+                                <rect key="frame" x="67" y="418" width="280" height="30"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="7Cc-HL-OkJ"/>
@@ -1484,7 +1484,7 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tj2-jh-6ZG">
-                                <rect key="frame" x="207" y="516" width="140" height="40"/>
+                                <rect key="frame" x="207" y="548" width="140" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.52390272010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="N02-p4-Zgh"/>
@@ -1661,17 +1661,17 @@
             <objects>
                 <viewController id="Ch2-IE-3IT" customClass="FeedbackVC" customModule="SurveyDataCollector" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GnX-LR-XUs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darBlueGradient_landscape" translatesAutoresizingMaskIntoConstraints="NO" id="bMs-j3-N1g">
                                 <rect key="frame" x="44" y="44" width="808" height="300"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darBlueGradient" translatesAutoresizingMaskIntoConstraints="NO" id="Ica-ll-GYB">
-                                <rect key="frame" x="0.0" y="56" width="414" height="703"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ud6-Eq-ijQ">
-                                <rect key="frame" x="0.0" y="66" width="414" height="683"/>
+                                <rect key="frame" x="0.0" y="98" width="414" height="705"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jbu-Eu-dGc" userLabel="UpperView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
@@ -1681,10 +1681,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KRg-Tj-N0D" userLabel="LowerView">
-                                        <rect key="frame" x="0.0" y="80" width="414" height="603"/>
+                                        <rect key="frame" x="0.0" y="80" width="414" height="625"/>
                                         <subviews>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kOM-k1-PFz">
-                                                <rect key="frame" x="0.0" y="10" width="414" height="593"/>
+                                                <rect key="frame" x="0.0" y="10" width="414" height="615"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A2d-4r-agn" userLabel="ContentView">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
@@ -1845,11 +1845,11 @@
             <objects>
                 <viewController id="HhU-OI-Cki" customClass="FeedbackVC" customModule="SurveyDataCollector" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="50f-LO-KjS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darBlueGradient" translatesAutoresizingMaskIntoConstraints="NO" id="NGf-tm-8tb">
-                                <rect key="frame" x="0.0" y="56" width="414" height="703"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darBlueGradient_landscape" translatesAutoresizingMaskIntoConstraints="NO" id="Ajy-0v-cAB">
                                 <rect key="frame" x="44" y="44" width="808" height="300"/>
@@ -1896,11 +1896,11 @@
             <objects>
                 <viewController id="zdO-ux-Q3p" customClass="FeedbackVC" customModule="SurveyDataCollector" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tc0-7n-kVe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darBlueGradient" translatesAutoresizingMaskIntoConstraints="NO" id="o8o-kE-QzV">
-                                <rect key="frame" x="0.0" y="56" width="414" height="703"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darBlueGradient_landscape" translatesAutoresizingMaskIntoConstraints="NO" id="NdJ-PH-i0g">
                                 <rect key="frame" x="44" y="44" width="808" height="300"/>
@@ -1947,11 +1947,11 @@
             <objects>
                 <viewController id="QHf-MB-WBP" customClass="FeedbackVC" customModule="SurveyDataCollector" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BV7-3v-7ix">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darBlueGradient" translatesAutoresizingMaskIntoConstraints="NO" id="nsS-hf-lOm">
-                                <rect key="frame" x="0.0" y="56" width="414" height="703"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darBlueGradient_landscape" translatesAutoresizingMaskIntoConstraints="NO" id="cBo-G7-De9">
                                 <rect key="frame" x="44" y="44" width="808" height="300"/>
@@ -1998,11 +1998,11 @@
             <objects>
                 <viewController id="0FR-na-H4j" customClass="FeedbackVC" customModule="SurveyDataCollector" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8B5-OD-VDI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darBlueGradient" translatesAutoresizingMaskIntoConstraints="NO" id="APJ-MH-SI6">
-                                <rect key="frame" x="0.0" y="56" width="414" height="703"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darBlueGradient_landscape" translatesAutoresizingMaskIntoConstraints="NO" id="9Bt-tm-edZ">
                                 <rect key="frame" x="44" y="44" width="808" height="300"/>
@@ -2051,7 +2051,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="oGe-uM-Wdb"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="g5w-kr-ILA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -2064,11 +2064,6 @@
             <point key="canvasLocation" x="1343" y="167"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="dXN-1M-LrH">
-            <size key="intrinsicContentSize" width="220" height="40"/>
-        </designable>
-    </designables>
     <resources>
         <image name="colorful_sky" width="720" height="1440"/>
         <image name="colorful_sky copy" width="1440" height="720"/>

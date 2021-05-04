@@ -1,4 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Prompts" representedClassName="Prompts" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="Transformable"/>
+        <attribute name="question1" optional="YES" attributeType="String"/>
+        <attribute name="question2" optional="YES" attributeType="String"/>
+        <attribute name="question3" optional="YES" attributeType="String"/>
+        <attribute name="question4" optional="YES" attributeType="String"/>
+        <attribute name="question5" optional="YES" attributeType="String"/>
+        <relationship name="response" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Response" inverseName="prompts" inverseEntity="Response"/>
+    </entity>
+    <entity name="Response" representedClassName="Response" syncable="YES">
+        <attribute name="response1" optional="YES" attributeType="Float" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="response2" optional="YES" attributeType="Float" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="response3" optional="YES" attributeType="Float" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="response4" optional="YES" attributeType="Float" defaultValueString="-1" usesScalarValueType="YES"/>
+        <attribute name="response5" optional="YES" attributeType="Float" defaultValueString="-1" usesScalarValueType="YES"/>
+        <relationship name="prompts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Prompts" inverseName="response" inverseEntity="Prompts"/>
+        <relationship name="user" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="response" inverseEntity="User"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="password" optional="YES" attributeType="String"/>
+        <attribute name="username" optional="YES" attributeType="String"/>
+        <relationship name="response" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Response" inverseName="user" inverseEntity="Response"/>
+    </entity>
+    <elements>
+        <element name="User" positionX="-1488.16015625" positionY="-136.0090942382812" width="128" height="103"/>
+        <element name="Prompts" positionX="-1145.723937988281" positionY="-209.0513000488281" width="128" height="148"/>
+        <element name="Response" positionX="-1314" positionY="-36" width="128" height="148"/>
+    </elements>
 </model>
