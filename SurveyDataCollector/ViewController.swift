@@ -31,9 +31,6 @@ class ViewController: UIViewController {
     @IBAction func login(_ sender: Any) {
         if username.text! == "" || password.text! == "" {
             let usersFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
-            
-//            let email = "Trevor"
-//            usersFetch.predicate = NSPredicate(format: "email == %@", email)
 
             do {
                 let fetchedUsers = try context.fetch(usersFetch) as! [User]
@@ -47,21 +44,28 @@ class ViewController: UIViewController {
     }
     
     @IBAction func signUp(_ sender: Any) {
-        var signup_list: [String?] = [add_email.text, add_user.text, add_pass.text, add_pass_copy.text]
+        var signup_list: [UITextField] = [add_email, add_user, add_pass, add_pass_copy]
         var persist: Bool = true
         for val in signup_list {
-            if val! == "" {
+            if val.text! == "" {
+                val.layer.borderColor = UIColor(red: 0.9, green: 0.1, blue: 0.1, alpha: 1.0).cgColor
+                val.layer.borderWidth = 2.5
+                val.layer.cornerRadius = 5
                 print("add input for -----------\t")
                 persist = false
             }
         }
-        if signup_list[2]! != signup_list[3]! {
-            
-        } else if isNewEmail(email: signup_list[0]!) && persist {
+        if signup_list[2].text! != signup_list[3].text! {
+            for val in [signup_list[2], signup_list[3]] {
+                val.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.1, alpha: 1.0).cgColor
+                val.layer.borderWidth = 3.0
+                val.layer.cornerRadius = 5
+            }
+        } else if isNewEmail(email: signup_list[0].text!) && persist {
             let new_user = User(context: context)
-            new_user.email = signup_list[0]!
-            new_user.username = signup_list[1]!
-            new_user.password = signup_list[2]!
+            new_user.email = signup_list[0].text!
+            new_user.username = signup_list[1].text!
+            new_user.password = signup_list[2].text!
         }
     }
     
@@ -81,12 +85,5 @@ class ViewController: UIViewController {
         }
     }
     
-//    func login (name: String, password: String) {
-//
-//    }
-    
-    func fetchUsers() {
-//        context.f
-    }
 }
 
