@@ -8,13 +8,21 @@
 import UIKit
 
 class AccountVC: UIViewController {
+    @IBOutlet weak var label_email: UILabel!
+    @IBOutlet weak var label_username: UILabel!
     
+    var username: String = ""
 
+    // Instantiation of database container
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("\t ----------- \t --\(username)\t -----------")
         // Do any additional setup after loading the view.
     }
+    
+
     
     @IBAction func logout(_ sender: Any) {
         var sb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

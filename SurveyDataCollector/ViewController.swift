@@ -81,7 +81,8 @@ class ViewController: UIViewController {
                 } else {
                     var sb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                     
-                    var vc = sb.instantiateViewController(withIdentifier: "Home") as! HomeVC
+                    var vc = sb.instantiateViewController(withIdentifier: "HomeNav") as! HomeNavVC
+                    vc.username = username.text!
                     present(vc, animated: true, completion: nil)
                 }
 
