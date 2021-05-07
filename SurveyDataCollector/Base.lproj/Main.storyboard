@@ -329,7 +329,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SurveyDataCollector" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" id="BYZ-38-t0r" customClass="ViewController" customModule="SurveyDataCollector" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -511,7 +511,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="uEI-nM-95M" kind="show" id="tKD-8H-gGn"/>
+                                    <segue destination="uEI-nM-95M" kind="show" id="xmn-Ne-W65"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZM-py-kV0">
@@ -744,10 +744,10 @@
             </objects>
             <point key="canvasLocation" x="-252" y="167"/>
         </scene>
-        <!--View Controller-->
+        <!--SignupVC-->
         <scene sceneID="uAS-dZ-chS">
             <objects>
-                <viewController id="uEI-nM-95M" customClass="ViewController" customModule="SurveyDataCollector" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uEI-nM-95M" customClass="SignupVC" customModule="SurveyDataCollector" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TQH-ct-npP" userLabel="SignupView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1051,7 +1051,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="signUp:" destination="uEI-nM-95M" eventType="touchUpInside" id="lDf-Hn-qgs"/>
+                                    <action selector="signUp:" destination="uEI-nM-95M" eventType="touchUpInside" id="EAF-eo-o1s"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1267,6 +1267,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="rnG-MA-gbL"/>
                     <connections>
                         <outlet property="add_email" destination="hNa-cp-1SJ" id="HF2-Ir-1QN"/>
                         <outlet property="add_pass" destination="38Y-TC-4pk" id="T0e-0U-e6m"/>

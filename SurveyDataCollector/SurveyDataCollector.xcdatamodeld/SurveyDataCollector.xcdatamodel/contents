@@ -25,8 +25,8 @@
         <relationship name="response" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Response" inverseName="user" inverseEntity="Response"/>
     </entity>
     <elements>
-        <element name="User" positionX="-1488.16015625" positionY="-136.0090942382812" width="128" height="103"/>
         <element name="Prompts" positionX="-1145.723937988281" positionY="-209.0513000488281" width="128" height="148"/>
         <element name="Response" positionX="-1314" positionY="-36" width="128" height="148"/>
+        <element name="User" positionX="-1488.16015625" positionY="-136.0090942382812" width="128" height="103"/>
     </elements>
 </model>
