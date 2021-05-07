@@ -1667,7 +1667,7 @@
         <!--Room Service-->
         <scene sceneID="jbT-SU-XSH">
             <objects>
-                <viewController id="Ch2-IE-3IT" customClass="FeedbackVC" customModule="SurveyDataCollector" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ch2-IE-3IT" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GnX-LR-XUs" userLabel="RoomView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1689,27 +1689,218 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KRg-Tj-N0D" userLabel="LowerView">
-                                        <rect key="frame" x="0.0" y="80" width="414" height="625"/>
+                                        <rect key="frame" x="0.0" y="80" width="414" height="545"/>
                                         <subviews>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kOM-k1-PFz">
-                                                <rect key="frame" x="0.0" y="10" width="414" height="615"/>
+                                                <rect key="frame" x="0.0" y="10" width="414" height="525"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A2d-4r-agn" userLabel="ContentView">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7u-Y7-sDd" customClass="CosmosView" customModule="SurveyDataCollector" customModuleProvider="target">
+                                                                <rect key="frame" x="176" y="88" width="220" height="44"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="220" id="5Ww-YP-flc"/>
+                                                                    <constraint firstAttribute="height" constant="44" id="VMO-gb-IJ2"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                                        <real key="value" value="40"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                                                        <color key="value" red="0.098679557459999998" green="0.0" blue="0.3873602357" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                                                        <color key="value" red="0.043717260360000003" green="0.24189585050000001" blue="0.51550544659999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                                                        <integer key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                        </subviews>
                                                         <color key="backgroundColor" red="0.0" green="1" blue="0.52390272010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="100" id="D1c-LI-ah6"/>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="C7u-Y7-sDd" secondAttribute="trailing" constant="10" id="BWt-rg-fz6"/>
+                                                            <constraint firstAttribute="height" constant="150" id="D1c-LI-ah6"/>
+                                                            <constraint firstAttribute="bottomMargin" secondItem="C7u-Y7-sDd" secondAttribute="bottom" constant="10" id="RSL-q2-uve"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JDr-6p-1Ne" userLabel="MidView">
-                                                        <rect key="frame" x="0.0" y="110" width="414" height="100"/>
+                                                        <rect key="frame" x="0.0" y="160" width="414" height="150"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qpt-Ph-Fey" customClass="CosmosView" customModule="SurveyDataCollector" customModuleProvider="target">
+                                                                <rect key="frame" x="176" y="88" width="220" height="44"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="220" id="RxV-oD-mYC"/>
+                                                                    <constraint firstAttribute="height" constant="44" id="qPw-6F-2kJ"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                                        <real key="value" value="40"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                                                        <color key="value" red="0.098679557459999998" green="0.0" blue="0.3873602357" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                                                        <color key="value" red="0.043717260360000003" green="0.24189585050000001" blue="0.51550544659999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                                                        <integer key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                        </subviews>
                                                         <color key="backgroundColor" red="0.0" green="1" blue="0.52390272010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="100" id="9mj-Tu-oOP"/>
+                                                            <constraint firstAttribute="bottomMargin" secondItem="Qpt-Ph-Fey" secondAttribute="bottom" constant="10" id="1tG-rV-GND"/>
+                                                            <constraint firstAttribute="height" constant="150" id="9mj-Tu-oOP"/>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="Qpt-Ph-Fey" secondAttribute="trailing" constant="10" id="l8l-X6-iAh"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QmJ-Oh-Hxj" userLabel="SecondMidView">
+                                                        <rect key="frame" x="0.0" y="320" width="414" height="150"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4jk-BG-hAD" customClass="CosmosView" customModule="SurveyDataCollector" customModuleProvider="target">
+                                                                <rect key="frame" x="176" y="88" width="220" height="44"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="44" id="XJT-XR-smN"/>
+                                                                    <constraint firstAttribute="width" constant="220" id="aTR-Hw-rgC"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                                        <real key="value" value="40"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                                                        <color key="value" red="0.098679557459999998" green="0.0" blue="0.3873602357" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                                                        <color key="value" red="0.043717260360000003" green="0.24189585050000001" blue="0.51550544659999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                                                        <integer key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.0" green="1" blue="0.52390272010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="4jk-BG-hAD" secondAttribute="trailing" constant="10" id="Lav-cb-EYw"/>
+                                                            <constraint firstAttribute="bottomMargin" secondItem="4jk-BG-hAD" secondAttribute="bottom" constant="10" id="VjK-CP-40R"/>
+                                                            <constraint firstAttribute="height" constant="150" id="zHS-B2-zZ2"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Rx-cI-blp" userLabel="ThirdMidView">
+                                                        <rect key="frame" x="0.0" y="480" width="414" height="150"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1TP-q8-DGz" customClass="CosmosView" customModule="SurveyDataCollector" customModuleProvider="target">
+                                                                <rect key="frame" x="176" y="88" width="220" height="44"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="44" id="XWn-l8-TdX"/>
+                                                                    <constraint firstAttribute="width" constant="220" id="jzi-re-Vst"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                                        <real key="value" value="40"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                                                        <color key="value" red="0.098679557459999998" green="0.0" blue="0.3873602357" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                                                        <color key="value" red="0.043717260360000003" green="0.24189585050000001" blue="0.51550544659999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                                                        <integer key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.0" green="1" blue="0.52390272010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottomMargin" secondItem="1TP-q8-DGz" secondAttribute="bottom" constant="10" id="bn4-9H-8Nq"/>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="1TP-q8-DGz" secondAttribute="trailing" constant="10" id="mHU-5F-4FA"/>
+                                                            <constraint firstAttribute="height" constant="150" id="s2o-jn-u7q"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4yS-kY-kEv" userLabel="FourthMidView">
+                                                        <rect key="frame" x="0.0" y="640" width="414" height="150"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="knY-6h-D8R" customClass="CosmosView" customModule="SurveyDataCollector" customModuleProvider="target">
+                                                                <rect key="frame" x="176" y="88" width="220" height="44"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="220" id="0F3-jB-3Bg"/>
+                                                                    <constraint firstAttribute="height" constant="44" id="lZx-Jo-izH"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                                        <integer key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                                        <real key="value" value="40"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                                                        <color key="value" red="0.098679557459999998" green="0.0" blue="0.3873602357" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                                                        <color key="value" red="0.043717260360000003" green="0.24189585050000001" blue="0.51550544659999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                                                        <integer key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.0" green="1" blue="0.52390272010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="knY-6h-D8R" secondAttribute="trailing" constant="10" id="Jlo-Zw-4Gh"/>
+                                                            <constraint firstAttribute="bottomMargin" secondItem="knY-6h-D8R" secondAttribute="bottom" constant="10" id="ajd-7e-QIs"/>
+                                                            <constraint firstAttribute="height" constant="150" id="gJv-bB-sFd"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ge4-co-wbn" userLabel="LastView">
-                                                        <rect key="frame" x="0.0" y="220" width="414" height="700"/>
+                                                        <rect key="frame" x="3" y="800" width="414" height="700"/>
                                                         <color key="backgroundColor" red="0.0" green="1" blue="0.52390272010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="700" id="QDm-sS-PLI"/>
@@ -1717,44 +1908,101 @@
                                                     </view>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="Ge4-co-wbn" secondAttribute="trailing" id="1YZ-Db-Ehu"/>
-                                                    <constraint firstItem="Ge4-co-wbn" firstAttribute="leading" secondItem="kOM-k1-PFz" secondAttribute="leading" id="EmY-it-iJj"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Ge4-co-wbn" secondAttribute="bottom" id="GTE-xE-Hmz"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Ge4-co-wbn" secondAttribute="trailing" constant="-3" id="1YZ-Db-Ehu"/>
+                                                    <constraint firstItem="Ge4-co-wbn" firstAttribute="leading" secondItem="kOM-k1-PFz" secondAttribute="leadingMargin" id="7GW-KO-gJe"/>
+                                                    <constraint firstItem="JDr-6p-1Ne" firstAttribute="centerX" secondItem="kOM-k1-PFz" secondAttribute="centerX" id="ARL-Cz-5dE"/>
+                                                    <constraint firstItem="Ge4-co-wbn" firstAttribute="leading" secondItem="kOM-k1-PFz" secondAttribute="leading" constant="3" id="EmY-it-iJj"/>
+                                                    <constraint firstItem="4yS-kY-kEv" firstAttribute="top" secondItem="3Rx-cI-blp" secondAttribute="bottom" constant="10" id="FTP-Rp-Mc8"/>
+                                                    <constraint firstAttribute="trailingMargin" secondItem="Ge4-co-wbn" secondAttribute="trailing" id="GdO-yS-lE6"/>
+                                                    <constraint firstItem="3Rx-cI-blp" firstAttribute="trailing" secondItem="4yS-kY-kEv" secondAttribute="trailing" id="Lxl-cu-CJH"/>
                                                     <constraint firstItem="A2d-4r-agn" firstAttribute="centerX" secondItem="kOM-k1-PFz" secondAttribute="centerX" id="QMh-Jn-7RL"/>
+                                                    <constraint firstItem="Ge4-co-wbn" firstAttribute="top" secondItem="4yS-kY-kEv" secondAttribute="bottom" constant="10" id="TJA-Eb-y32"/>
+                                                    <constraint firstItem="A2d-4r-agn" firstAttribute="trailing" secondItem="JDr-6p-1Ne" secondAttribute="trailing" id="UHF-fl-aHP"/>
+                                                    <constraint firstItem="JDr-6p-1Ne" firstAttribute="centerX" secondItem="kOM-k1-PFz" secondAttribute="centerX" id="WRN-k0-FDW"/>
+                                                    <constraint firstAttribute="trailingMargin" secondItem="JDr-6p-1Ne" secondAttribute="trailing" id="eFP-Mm-vC0"/>
                                                     <constraint firstItem="JDr-6p-1Ne" firstAttribute="leading" secondItem="kOM-k1-PFz" secondAttribute="leading" id="eSB-jV-IdM"/>
-                                                    <constraint firstItem="Ge4-co-wbn" firstAttribute="top" secondItem="JDr-6p-1Ne" secondAttribute="bottom" constant="10" id="ijA-ts-kg9"/>
+                                                    <constraint firstItem="3Rx-cI-blp" firstAttribute="leading" secondItem="JDr-6p-1Ne" secondAttribute="leading" id="eyP-2C-lFQ"/>
+                                                    <constraint firstAttribute="trailingMargin" secondItem="A2d-4r-agn" secondAttribute="trailing" id="eyV-hO-P4o"/>
+                                                    <constraint firstItem="QmJ-Oh-Hxj" firstAttribute="top" secondItem="JDr-6p-1Ne" secondAttribute="bottom" constant="10" id="f9u-cc-h9j"/>
+                                                    <constraint firstItem="JDr-6p-1Ne" firstAttribute="leading" secondItem="kOM-k1-PFz" secondAttribute="leadingMargin" id="imR-dQ-V8k"/>
+                                                    <constraint firstItem="3Rx-cI-blp" firstAttribute="leading" secondItem="4yS-kY-kEv" secondAttribute="leading" id="inn-w1-0vu"/>
+                                                    <constraint firstItem="3Rx-cI-blp" firstAttribute="trailing" secondItem="JDr-6p-1Ne" secondAttribute="trailing" id="lBh-0P-YB3"/>
+                                                    <constraint firstAttribute="bottomMargin" secondItem="Ge4-co-wbn" secondAttribute="bottom" id="mSW-Ih-1hc"/>
+                                                    <constraint firstItem="3Rx-cI-blp" firstAttribute="leading" secondItem="QmJ-Oh-Hxj" secondAttribute="leading" id="nY6-4F-DyZ"/>
                                                     <constraint firstItem="JDr-6p-1Ne" firstAttribute="top" secondItem="A2d-4r-agn" secondAttribute="bottom" constant="10" id="nka-fM-Srz"/>
+                                                    <constraint firstItem="3Rx-cI-blp" firstAttribute="trailing" secondItem="QmJ-Oh-Hxj" secondAttribute="trailing" id="nlg-xp-ch4"/>
                                                     <constraint firstItem="A2d-4r-agn" firstAttribute="top" secondItem="kOM-k1-PFz" secondAttribute="top" id="tUV-uA-Xcv"/>
                                                     <constraint firstAttribute="trailing" secondItem="JDr-6p-1Ne" secondAttribute="trailing" id="uJj-ar-Otp"/>
+                                                    <constraint firstItem="3Rx-cI-blp" firstAttribute="top" secondItem="QmJ-Oh-Hxj" secondAttribute="bottom" constant="10" id="uad-Mv-NjM"/>
+                                                    <constraint firstItem="A2d-4r-agn" firstAttribute="leading" secondItem="JDr-6p-1Ne" secondAttribute="leading" id="umJ-uJ-pyU"/>
+                                                    <constraint firstItem="A2d-4r-agn" firstAttribute="leading" secondItem="kOM-k1-PFz" secondAttribute="leadingMargin" id="x7B-CR-WOU"/>
                                                     <constraint firstItem="Ge4-co-wbn" firstAttribute="centerX" secondItem="kOM-k1-PFz" secondAttribute="centerX" id="xCV-3Z-Q2V"/>
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
+                                                        <exclude reference="eyV-hO-P4o"/>
+                                                        <exclude reference="x7B-CR-WOU"/>
+                                                        <exclude reference="ARL-Cz-5dE"/>
+                                                        <exclude reference="eFP-Mm-vC0"/>
+                                                        <exclude reference="imR-dQ-V8k"/>
+                                                        <exclude reference="7GW-KO-gJe"/>
+                                                        <exclude reference="GdO-yS-lE6"/>
                                                         <exclude reference="xCV-3Z-Q2V"/>
                                                     </mask>
                                                 </variation>
                                                 <variation key="heightClass=compact-widthClass=regular">
                                                     <mask key="constraints">
+                                                        <exclude reference="QMh-Jn-7RL"/>
+                                                        <include reference="eyV-hO-P4o"/>
+                                                        <include reference="x7B-CR-WOU"/>
+                                                        <exclude reference="ARL-Cz-5dE"/>
+                                                        <include reference="eFP-Mm-vC0"/>
+                                                        <exclude reference="eSB-jV-IdM"/>
+                                                        <include reference="imR-dQ-V8k"/>
+                                                        <exclude reference="uJj-ar-Otp"/>
                                                         <exclude reference="1YZ-Db-Ehu"/>
+                                                        <include reference="7GW-KO-gJe"/>
                                                         <exclude reference="EmY-it-iJj"/>
-                                                        <include reference="xCV-3Z-Q2V"/>
+                                                        <include reference="GdO-yS-lE6"/>
+                                                        <exclude reference="xCV-3Z-Q2V"/>
                                                     </mask>
                                                 </variation>
                                             </scrollView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="kOM-k1-PFz" secondAttribute="bottom" id="Apm-Q0-Acl"/>
+                                            <constraint firstAttribute="bottom" secondItem="kOM-k1-PFz" secondAttribute="bottom" constant="10" id="Apm-Q0-Acl"/>
                                             <constraint firstItem="kOM-k1-PFz" firstAttribute="leading" secondItem="KRg-Tj-N0D" secondAttribute="leading" id="E6c-SP-0Zv"/>
+                                            <constraint firstItem="kOM-k1-PFz" firstAttribute="centerX" secondItem="KRg-Tj-N0D" secondAttribute="centerX" id="ZKL-IE-FfX"/>
                                             <constraint firstAttribute="trailing" secondItem="kOM-k1-PFz" secondAttribute="trailing" id="k5S-aI-oBT"/>
                                             <constraint firstItem="kOM-k1-PFz" firstAttribute="top" secondItem="KRg-Tj-N0D" secondAttribute="top" constant="10" id="s2G-Sb-nMF"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="ZKL-IE-FfX"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <exclude reference="ZKL-IE-FfX"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOi-bN-xm3" userLabel="FooterView">
+                                        <rect key="frame" x="0.0" y="625" width="414" height="80"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="caB-yb-AwC"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="KRg-Tj-N0D" firstAttribute="centerX" secondItem="ud6-Eq-ijQ" secondAttribute="centerX" id="4Bm-zt-5gh"/>
+                                    <constraint firstAttribute="trailing" secondItem="VOi-bN-xm3" secondAttribute="trailing" id="A1Y-mK-8uW"/>
                                     <constraint firstItem="Jbu-Eu-dGc" firstAttribute="centerX" secondItem="ud6-Eq-ijQ" secondAttribute="centerX" id="ANX-7I-iii"/>
                                     <constraint firstItem="Jbu-Eu-dGc" firstAttribute="trailing" secondItem="ud6-Eq-ijQ" secondAttribute="trailingMargin" id="Aq4-mE-kqq"/>
+                                    <constraint firstItem="VOi-bN-xm3" firstAttribute="centerX" secondItem="ud6-Eq-ijQ" secondAttribute="centerX" id="Lr6-dz-eEC"/>
                                     <constraint firstItem="Jbu-Eu-dGc" firstAttribute="leading" secondItem="ud6-Eq-ijQ" secondAttribute="leadingMargin" id="ReZ-Qc-5qo"/>
+                                    <constraint firstItem="VOi-bN-xm3" firstAttribute="leading" secondItem="ud6-Eq-ijQ" secondAttribute="leading" id="jMQ-0l-k9F"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -1764,8 +2012,8 @@
                             <constraint firstItem="bMs-j3-N1g" firstAttribute="leading" secondItem="0VN-h2-byy" secondAttribute="leading" id="6Iy-59-SOq"/>
                             <constraint firstItem="0VN-h2-byy" firstAttribute="bottom" secondItem="ud6-Eq-ijQ" secondAttribute="bottom" constant="10" id="770-xD-ecd"/>
                             <constraint firstItem="0VN-h2-byy" firstAttribute="bottom" secondItem="bMs-j3-N1g" secondAttribute="bottom" id="7EL-KF-28B"/>
-                            <constraint firstItem="Ge4-co-wbn" firstAttribute="width" secondItem="GnX-LR-XUs" secondAttribute="width" id="AZN-We-QiQ"/>
-                            <constraint firstItem="A2d-4r-agn" firstAttribute="width" secondItem="GnX-LR-XUs" secondAttribute="width" id="Byn-3r-8Nm"/>
+                            <constraint firstItem="Ge4-co-wbn" firstAttribute="width" relation="lessThanOrEqual" secondItem="kOM-k1-PFz" secondAttribute="width" id="AZN-We-QiQ"/>
+                            <constraint firstItem="A2d-4r-agn" firstAttribute="width" relation="lessThanOrEqual" secondItem="kOM-k1-PFz" secondAttribute="width" id="Byn-3r-8Nm"/>
                             <constraint firstItem="Ica-ll-GYB" firstAttribute="leading" secondItem="0VN-h2-byy" secondAttribute="leading" id="QJ7-9m-sDP"/>
                             <constraint firstItem="Ica-ll-GYB" firstAttribute="top" secondItem="0VN-h2-byy" secondAttribute="top" id="RiS-n1-DhA"/>
                             <constraint firstItem="ud6-Eq-ijQ" firstAttribute="top" secondItem="0VN-h2-byy" secondAttribute="top" constant="10" id="Xbh-8y-iKA"/>
@@ -1775,7 +2023,7 @@
                             <constraint firstItem="0VN-h2-byy" firstAttribute="trailing" secondItem="bMs-j3-N1g" secondAttribute="trailing" id="eOs-AA-SmU"/>
                             <constraint firstItem="bMs-j3-N1g" firstAttribute="top" secondItem="0VN-h2-byy" secondAttribute="top" id="l1Z-wW-D7n"/>
                             <constraint firstItem="0VN-h2-byy" firstAttribute="bottom" secondItem="Ica-ll-GYB" secondAttribute="bottom" id="nnj-EQ-03N"/>
-                            <constraint firstItem="JDr-6p-1Ne" firstAttribute="width" secondItem="GnX-LR-XUs" secondAttribute="width" id="zCh-Pa-7J2"/>
+                            <constraint firstItem="JDr-6p-1Ne" firstAttribute="width" relation="lessThanOrEqual" secondItem="kOM-k1-PFz" secondAttribute="width" id="zCh-Pa-7J2"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -1799,7 +2047,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cgv-5q-ySL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4972.463768115942" y="166.74107142857142"/>
+            <point key="canvasLocation" x="4971.0144927536239" y="166.74107142857142"/>
         </scene>
         <!--StarVC-->
         <scene sceneID="RTv-ww-oXT">
@@ -1810,7 +2058,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dXN-1M-LrH" customClass="CosmosView" customModule="SurveyDataCollector" customModuleProvider="target">
-                                <rect key="frame" x="87" y="80" width="240" height="128"/>
+                                <rect key="frame" x="87" y="80" width="240" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
@@ -1818,10 +2066,22 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="rating">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="starSize">
                                         <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                        <color key="value" red="0.0" green="1" blue="0.52390272010000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                        <color key="value" red="0.043717260360000003" green="0.24189585050000001" blue="0.51550544659999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                        <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -1835,12 +2095,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6gz-nw-EBw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3894" y="-1075"/>
+            <point key="canvasLocation" x="3892.753623188406" y="-1075.4464285714284"/>
         </scene>
         <!--Ratings-->
         <scene sceneID="eTN-92-egB">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="E9y-P2-TER" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBar" automaticallyAdjustsScrollViewInsets="NO" id="E9y-P2-TER" customClass="FeedbackVC" customModule="SurveyDataCollector" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Ratings" id="oc9-of-HBF"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xUO-Ub-pTA">
@@ -1863,7 +2123,7 @@
         <!--Gym-->
         <scene sceneID="ssn-KM-eb0">
             <objects>
-                <viewController id="HhU-OI-Cki" customClass="FeedbackVC" customModule="SurveyDataCollector" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HhU-OI-Cki" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="50f-LO-KjS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1914,7 +2174,7 @@
         <!--Spa-->
         <scene sceneID="pX6-Mk-1sR">
             <objects>
-                <viewController id="zdO-ux-Q3p" customClass="FeedbackVC" customModule="SurveyDataCollector" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zdO-ux-Q3p" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tc0-7n-kVe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1965,7 +2225,7 @@
         <!--Food-->
         <scene sceneID="vws-FU-tzE">
             <objects>
-                <viewController id="QHf-MB-WBP" customClass="FeedbackVC" customModule="SurveyDataCollector" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QHf-MB-WBP" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BV7-3v-7ix">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2016,7 +2276,7 @@
         <!--Overall-->
         <scene sceneID="WTD-GQ-ORc">
             <objects>
-                <viewController id="0FR-na-H4j" customClass="FeedbackVC" customModule="SurveyDataCollector" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0FR-na-H4j" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8B5-OD-VDI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2085,7 +2345,22 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="1TP-q8-DGz">
+            <size key="intrinsicContentSize" width="220" height="40"/>
+        </designable>
+        <designable name="4jk-BG-hAD">
+            <size key="intrinsicContentSize" width="220" height="40"/>
+        </designable>
+        <designable name="C7u-Y7-sDd">
+            <size key="intrinsicContentSize" width="220" height="40"/>
+        </designable>
+        <designable name="Qpt-Ph-Fey">
+            <size key="intrinsicContentSize" width="220" height="40"/>
+        </designable>
         <designable name="dXN-1M-LrH">
+            <size key="intrinsicContentSize" width="220" height="40"/>
+        </designable>
+        <designable name="knY-6h-D8R">
             <size key="intrinsicContentSize" width="220" height="40"/>
         </designable>
     </designables>
