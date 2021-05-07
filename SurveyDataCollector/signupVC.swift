@@ -14,9 +14,16 @@ class SignupVC: UIViewController {
     @IBOutlet weak var add_pass: UITextField!
     @IBOutlet weak var add_pass_copy: UITextField!
     
+    @IBOutlet weak var label_email: UILabel!
+    @IBOutlet weak var label_user: UILabel!
+    @IBOutlet weak var label_pass: UILabel!
+    @IBOutlet weak var label_pass_copy: UILabel!
     
+    var label_list: [UILabel] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        label_list = [label_email, label_user, label_pass, label_pass_copy]
+        
     }
     
     
@@ -36,39 +43,67 @@ class SignupVC: UIViewController {
          --- Series of test to validate text fields have acceptable values
          --------------------------
          */
-        for val in signup_list {
+        var color = UIColor(red: 0.9, green: 0.1, blue: 0.1, alpha: 1.0)
+        for i in 0...3 {
+            var val = signup_list[i]
+            
             val.layer.borderWidth = 0
+            label_list[i].textColor = .black
+            label_list[i].text = "\(signup_list[i].placeholder ?? "")"
             if val.text! == "" { // Test to validate existing values for each field
-                val.layer.borderColor = UIColor(red: 0.9, green: 0.1, blue: 0.1, alpha: 1.0).cgColor
+                label_list[i].text = "\(signup_list[i].placeholder ?? "") Field Missing"
+                label_list[i].textColor = color
+                val.layer.borderColor = color.cgColor
                 val.layer.borderWidth = 2.5
                 val.layer.cornerRadius = 5
                 print("add input for -----------\t")
                 persist = false
             }
         }
-        if signup_list[2].text! != signup_list[3].text! { // Test to validate password entries match
-            for val in [signup_list[2], signup_list[3]] {
-                val.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.1, alpha: 1.0).cgColor
-                val.layer.borderWidth = 3.0
-                val.layer.cornerRadius = 5
-                persist = false
-            }
-        }
-        if !(isValidEmail(stringValue: signup_list[0].text!)) { // Test to validate email address is real
+        if !(isValidEmail(stringValue: signup_list[0].text!)) && label_list[0].textColor != color { // Test to validate email address is real
+            color = UIColor(red: 0.1, green: 0.1, blue: 0.9, alpha: 1.0)
+            label_list[0].text = "Email has invalid formatting:"
+            label_list[0].textColor = color
             let val = signup_list[0]
-            val.layer.borderColor = UIColor(red: 0.1, green: 0.1, blue: 0.9, alpha: 1.0).cgColor
+            val.layer.borderColor = color.cgColor
             val.layer.borderWidth = 2.5
             val.layer.cornerRadius = 5
             print("Incorrect email input -----------\t")
             persist = false
         }
         if !isNewEmail(email: signup_list[0].text!) { // Test to validate no accounts exist for that email address
+            color = UIColor(red: 0.9, green: 0.1, blue: 0.9, alpha: 1.0)
+            label_list[0].text = "Email already exists:"
+            label_list[0].textColor = color
             let val = signup_list[0]
-            val.layer.borderColor = UIColor(red: 0.5, green: 0.1, blue: 0.9, alpha: 1.0).cgColor
+            val.layer.borderColor = color.cgColor
             val.layer.borderWidth = 2.5
             val.layer.cornerRadius = 5
             print("Email input already exists -----------\t")
             persist = false
+        }
+        if !isNewUsername(username: signup_list[1].text!) { // Test to validate no accounts exist for that email address
+            color = UIColor(red: 0.1, green: 0.9, blue: 0.9, alpha: 1.0)
+            label_list[1].text = "Username is taken:"
+            label_list[1].textColor = color
+            let val = signup_list[1]
+            val.layer.borderColor = color.cgColor
+            val.layer.borderWidth = 2.5
+            val.layer.cornerRadius = 5
+            print("Email input already exists -----------\t")
+            persist = false
+        }
+        if signup_list[2].text! != signup_list[3].text! { // Test to validate password entries match
+            for i in [2, 3] {
+                color = UIColor(red: 0.9, green: 0.9, blue: 0.1, alpha: 1.0)
+                label_list[i].text = "Password Mismatch:"
+                label_list[i].textColor = color
+                var val = signup_list[i]
+                val.layer.borderColor = color.cgColor
+                val.layer.borderWidth = 3.0
+                val.layer.cornerRadius = 5
+                persist = false
+            }
         }
         /*
          --------------------------
@@ -87,8 +122,8 @@ class SignupVC: UIViewController {
             }
             
             var sb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            var wel = sb.instantiateViewController(withIdentifier: "Login") as! ViewController
-            present(wel, animated: true, completion: nil)
+            var vc = sb.instantiateViewController(withIdentifier: "Login") as! ViewController
+            present(vc, animated: true, completion: nil)
         }
     }
     
@@ -121,9 +156,28 @@ class SignupVC: UIViewController {
                 return false
             }
         } catch {
-            fatalError("Failed to fetch employees: \(error)")
+            fatalError("Failed to fetch emails: \(error)")
         }
     }
-
+    /*
+     --------------------------
+     --- Utility function to validate username isn't already assigned to an account
+     --------------------------
+     */
+    func isNewUsername (username: String) -> Bool {
+        let usersFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        usersFetch.predicate = NSPredicate(format: "username == %@", username)
+        
+        do {
+            let fetchedUsers = try context.fetch(usersFetch) as! [User]
+            if fetchedUsers.count == 0 {
+                return true
+            } else {
+                return false
+            }
+        } catch {
+            fatalError("Failed to fetch usernames: \(error)")
+        }
+    }
 
 }

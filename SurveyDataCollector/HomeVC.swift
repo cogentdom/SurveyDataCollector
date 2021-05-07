@@ -1,26 +1,18 @@
 //
-//  AccountVC.swift
+//  HomeVC.swift
 //  SurveyDataCollector
 //
-//  Created by Dominik Huffield on 5/3/21.
+//  Created by Dominik Huffield on 5/7/21.
 //
 
 import UIKit
 
-class AccountVC: UIViewController {
-    
+class HomeVC: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-    
-    @IBAction func logout(_ sender: Any) {
-        var sb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        var vc = sb.instantiateViewController(withIdentifier: "Login") as! ViewController
-        present(vc, animated: true, completion: nil)
-
     }
     
 

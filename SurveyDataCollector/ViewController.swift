@@ -27,16 +27,18 @@ class ViewController: UIViewController {
      */
     @IBAction func login(_ sender: Any) {
         var persist: Bool = true
+        password.layer.borderWidth = 0
+        username.layer.borderWidth = 0
         /*
          --------------------------
          --- Validations for whether the fields have entries
          --------------------------
          */
         if username.text! == "" && password.text! == "" {
-            for val in [username, password] {
-                val?.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.1, alpha: 1.0).cgColor
-                val?.layer.borderWidth = 3.0
-                val?.layer.cornerRadius = 5
+            for val in [username!, password!] {
+                val.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.1, alpha: 1.0).cgColor
+                val.layer.borderWidth = 3.0
+                val.layer.cornerRadius = 5
                 persist = false
             }
         } else if username.text! == "" {
@@ -58,18 +60,31 @@ class ViewController: UIViewController {
          --- Validation for whether those fields are correct
          --------------------------
          */
-        
-//        persist = true
         if persist {
             let usersFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+//            try context.delete(<#NSManagedObject#>)
             do {
-                usersFetch.predicate = NSPredicate(format: "username == %@ AND password == %@", username.text!, password.text!)
+                usersFetch.predicate = NSPredicate(format: "username == %@", username.text!)
                 let fetchedUsers = try context.fetch(usersFetch) as! [User]
 
 //                print(fetchedUsers.description)
-                print("Found username & password")
-                print("Users count is: \(fetchedUsers.count)")
-                print("Users username: \(fetchedUsers.hashValue)")
+                if fetchedUsers.count == 0 {
+                    var val = username
+                    val?.layer.borderColor = UIColor(red: 0.1, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
+                    val?.layer.borderWidth = 3.0
+                    val?.layer.cornerRadius = 5
+                } else if fetchedUsers[0].password != password.text! {
+                    var val = password
+                    val?.layer.borderColor = UIColor(red: 0.1, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
+                    val?.layer.borderWidth = 3.0
+                    val?.layer.cornerRadius = 5
+                } else {
+                    var sb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    
+                    var vc = sb.instantiateViewController(withIdentifier: "Home") as! HomeVC
+                    present(vc, animated: true, completion: nil)
+                }
+
             } catch {
                 fatalError("Failed to fetch employees: \(error)")
             }

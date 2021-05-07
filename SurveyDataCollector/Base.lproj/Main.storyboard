@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NHU-vd-BJy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -785,7 +785,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hNa-cp-1SJ">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hNa-cp-1SJ">
                                 <rect key="frame" x="67" y="270" width="280" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="Az3-aQ-AZU"/>
@@ -878,7 +878,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M6B-tR-hZH">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M6B-tR-hZH">
                                 <rect key="frame" x="67" y="374" width="280" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="3RF-AB-W0S"/>
@@ -937,14 +937,14 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="38Y-TC-4pk">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="38Y-TC-4pk">
                                 <rect key="frame" x="67" y="478" width="280" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="CKj-PQ-o3y"/>
                                     <constraint firstAttribute="width" constant="280" id="O54-gI-8qj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="CKj-PQ-o3y"/>
@@ -993,14 +993,14 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZMl-tr-21i">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZMl-tr-21i">
                                 <rect key="frame" x="67" y="572.5" width="280" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="7dX-UH-M3f"/>
                                     <constraint firstAttribute="width" constant="280" id="gQn-Yb-W6g"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="7dX-UH-M3f"/>
@@ -1273,6 +1273,10 @@
                         <outlet property="add_pass" destination="38Y-TC-4pk" id="T0e-0U-e6m"/>
                         <outlet property="add_pass_copy" destination="ZMl-tr-21i" id="Xuv-T2-X9f"/>
                         <outlet property="add_user" destination="M6B-tR-hZH" id="quT-gJ-3PD"/>
+                        <outlet property="label_email" destination="nkS-V0-7m2" id="Gdu-Re-Bq7"/>
+                        <outlet property="label_pass" destination="6Id-sX-eA2" id="xMK-bB-RE3"/>
+                        <outlet property="label_pass_copy" destination="1bR-Cr-5tb" id="XNT-T2-kI8"/>
+                        <outlet property="label_user" destination="TmR-sM-hAv" id="tjz-tU-7Ux"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jg6-pd-rwy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1514,6 +1518,9 @@
                                         <include reference="oRU-9L-3Jz"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="logout:" destination="vNn-30-aAf" eventType="touchUpInside" id="eh6-iC-gwk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Oc7-aH-zmf"/>
@@ -1719,7 +1726,20 @@
                                                     <constraint firstItem="JDr-6p-1Ne" firstAttribute="top" secondItem="A2d-4r-agn" secondAttribute="bottom" constant="10" id="nka-fM-Srz"/>
                                                     <constraint firstItem="A2d-4r-agn" firstAttribute="top" secondItem="kOM-k1-PFz" secondAttribute="top" id="tUV-uA-Xcv"/>
                                                     <constraint firstAttribute="trailing" secondItem="JDr-6p-1Ne" secondAttribute="trailing" id="uJj-ar-Otp"/>
+                                                    <constraint firstItem="Ge4-co-wbn" firstAttribute="centerX" secondItem="kOM-k1-PFz" secondAttribute="centerX" id="xCV-3Z-Q2V"/>
                                                 </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="xCV-3Z-Q2V"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <exclude reference="1YZ-Db-Ehu"/>
+                                                        <exclude reference="EmY-it-iJj"/>
+                                                        <include reference="xCV-3Z-Q2V"/>
+                                                    </mask>
+                                                </variation>
                                             </scrollView>
                                         </subviews>
                                         <constraints>
@@ -2044,10 +2064,10 @@
             </objects>
             <point key="canvasLocation" x="4116" y="980"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--HomeVC-->
         <scene sceneID="J4Y-G9-vlK">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NHU-vd-BJy" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Home" automaticallyAdjustsScrollViewInsets="NO" id="NHU-vd-BJy" customClass="HomeVC" customModule="SurveyDataCollector" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="oGe-uM-Wdb"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="g5w-kr-ILA">

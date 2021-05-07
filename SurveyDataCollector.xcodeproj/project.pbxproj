@@ -40,6 +40,7 @@
 		F253D7C5263FE59E00F3FBFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F253D7C4263FE59E00F3FBFF /* Assets.xcassets */; };
 		F253D7C8263FE59E00F3FBFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F253D7C6263FE59E00F3FBFF /* LaunchScreen.storyboard */; };
 		F253D7D1263FF9CC00F3FBFF /* FeedbackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F253D7D0263FF9CC00F3FBFF /* FeedbackVC.swift */; };
+		F2AB474E264526A700F184AB /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AB474D264526A700F184AB /* HomeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		F253D7C7263FE59E00F3FBFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F253D7C9263FE59E00F3FBFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F253D7D0263FF9CC00F3FBFF /* FeedbackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackVC.swift; sourceTree = "<group>"; };
+		F2AB474D264526A700F184AB /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				F2525CC226407235001E21A2 /* SignupVC.swift */,
 				F2525CC526407F0E001E21A2 /* ForgotVC.swift */,
 				F2525CEE26409B8F001E21A2 /* StarVC.swift */,
+				F2AB474D264526A700F184AB /* HomeVC.swift */,
 			);
 			path = SurveyDataCollector;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				F2525D09264128C1001E21A2 /* User+CoreDataProperties.swift in Sources */,
 				F2525CE526409A75001E21A2 /* CosmosRating.swift in Sources */,
 				F2525CE926409A75001E21A2 /* StarLayer.swift in Sources */,
+				F2AB474E264526A700F184AB /* HomeVC.swift in Sources */,
 				F2525CC626407F0E001E21A2 /* ForgotVC.swift in Sources */,
 				F2525D0A264128C1001E21A2 /* Prompts+CoreDataClass.swift in Sources */,
 				F2525CE226409A75001E21A2 /* CosmosLocalizedRating.swift in Sources */,
